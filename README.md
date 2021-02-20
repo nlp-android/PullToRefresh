@@ -1,3 +1,24 @@
+To get a Git project into your build:
+
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.nlp-android:PullToRefresh:2.2.1'
+	}
+
+
+
+以下为原始库的说明。
+----------
 # PLEASE NOTE, THIS PROJECT IS NO LONGER BEING MAINTAINED
 
 * * *
