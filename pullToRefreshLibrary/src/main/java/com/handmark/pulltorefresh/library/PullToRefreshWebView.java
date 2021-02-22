@@ -21,7 +21,6 @@ import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
 import android.os.Bundle;
 import android.util.AttributeSet;
-import android.util.FloatMath;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 
@@ -30,12 +29,12 @@ public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
     private static final OnRefreshListener<WebView> defaultOnRefreshListener =
             new OnRefreshListener<WebView>() {
 
-        @Override
-        public void onRefresh(PullToRefreshBase<WebView> refreshView) {
-            refreshView.getRefreshableView().reload();
-        }
+                @Override
+                public void onRefresh(PullToRefreshBase<WebView> refreshView) {
+                    refreshView.getRefreshableView().reload();
+                }
 
-    };
+            };
 
     private final WebChromeClient defaultWebChromeClient = new WebChromeClient() {
 
@@ -156,15 +155,18 @@ public class PullToRefreshWebView extends PullToRefreshBase<WebView> {
                     scrollRangeY, maxOverScrollX, maxOverScrollY, isTouchEvent);
 
             // Does all of the hard work...
-            OverscrollHelper.overScrollBy(PullToRefreshWebView.this, deltaX, scrollX, deltaY, scrollY,
-                    getScrollRange(), OVERSCROLL_FUZZY_THRESHOLD, OVERSCROLL_SCALE_FACTOR, isTouchEvent);
+            OverscrollHelper.overScrollBy(PullToRefreshWebView.this, deltaX, scrollX, deltaY,
+                    scrollY,
+                    getScrollRange(), OVERSCROLL_FUZZY_THRESHOLD, OVERSCROLL_SCALE_FACTOR,
+                    isTouchEvent);
 
             return returnValue;
         }
 
         private int getScrollRange() {
-            return (int) Math.max(0, (float) Math.floor(mRefreshableView.getContentHeight() * mRefreshableView.getScale())
-                    - (getHeight() - getPaddingBottom() - getPaddingTop()));
+            return (int) Math.max(0,
+                    Math.floor(mRefreshableView.getContentHeight() * mRefreshableView.getScale())
+                            - (getHeight() - getPaddingBottom() - getPaddingTop()));
         }
     }
 }
