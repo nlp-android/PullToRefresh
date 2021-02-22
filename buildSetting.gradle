@@ -1,6 +1,6 @@
 ext {
-    android = [versionCode      : 2203,
-               versionName      : "2.2.3",
+    android = [versionCode      : 2204,
+               versionName      : "2.2.4",
                compileSdkVersion: 30,
                minSdkVersion    : 19,
                targetSdkVersion : 30,
