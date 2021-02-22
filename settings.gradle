@@ -1,5 +1,5 @@
 include ':sample'
-include ':pullToRefreshLibrary'
+include ':PullToRefreshLibrary'
 include ':PullToRefreshListFragment'
 //project(':PullToRefreshListFragment').projectDir = new File("./extras/PullToRefreshListFragment")
 include ':PullToRefreshViewPager'

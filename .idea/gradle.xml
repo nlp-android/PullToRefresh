@@ -10,9 +10,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/PullToRefreshLibrary" />
             <option value="$PROJECT_DIR$/PullToRefreshListFragment" />
             <option value="$PROJECT_DIR$/PullToRefreshViewPager" />
-            <option value="$PROJECT_DIR$/pullToRefreshLibrary" />
             <option value="$PROJECT_DIR$/sample" />
           </set>
         </option>

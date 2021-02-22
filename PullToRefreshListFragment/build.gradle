@@ -27,7 +27,7 @@ android {
 
     libraryVariants.all { variant ->
         def output = variant.outputs.first()
-        def aarName = "PulltorefreshListFragment-${variant.buildType.name}-${defaultConfig.versionName}.aar"
+        def aarName = "${project.name}-${variant.buildType.name}-${defaultConfig.versionName}.aar"
 
         output.outputFileName = aarName
     }
@@ -40,7 +40,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation project(path: ':pullToRefreshLibrary')
+    implementation project(path: ':PullToRefreshLibrary')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

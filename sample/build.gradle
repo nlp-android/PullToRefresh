@@ -36,7 +36,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation project(path: ':PullToRefreshListFragment')
     implementation project(path: ':PullToRefreshViewPager')
-    implementation project(path: ':pullToRefreshLibrary')
+    implementation project(path: ':PullToRefreshLibrary')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

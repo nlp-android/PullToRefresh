@@ -27,7 +27,7 @@ android {
 
     libraryVariants.all { variant ->
         def output = variant.outputs.first()
-        def aarName = "Pulltorefresh-${variant.buildType.name}-${defaultConfig.versionName}.aar"
+        def aarName = "${project.name}-${variant.buildType.name}-${defaultConfig.versionName}.aar"
 
         output.outputFileName = aarName
     }
